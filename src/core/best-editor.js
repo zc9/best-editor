@@ -77,7 +77,7 @@ class BestEditor {
             this.handler.addHandle(cmd, handle);
         }
     }
-    getHtml() {
+    getHTML() {
         return this.$editor.html();
     }
     //save the editor selection in real time
