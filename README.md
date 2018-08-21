@@ -7,6 +7,5 @@
             imageUpload: 'http://127.0.0.1:2000/image/upload',
             imageLinkUpload: 'http://127.0.0.1:2000/image/upload1'
         });</code></pre>
-        
 # 运行环境
 ### 目前测试的环境：edge、ie10、chrome。建议运行在基于webkit内核的浏览器上，拥有更好的体验。
