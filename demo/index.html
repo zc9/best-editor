@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <title>best-editor</title>
+    <base href="/">
+    <link rel="stylesheet" href="dist/best-editor.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #editor {
+            height: 340px;
+            width: 860px;
+            margin: 0 auto;
+            border: 1px solid  #ccc;
+
+        }
+        div[contenteditable="true"]{ cursor:text }
+    </style>
+</head>
+<body>
+    <div id="editor">
+        
+    </div>
+    <script src="dist/best-editor.js"></script>
+    <script>
+        var bestEdtitor = new BestEditor('#editor', {
+            imageUpload: 'http://127.0.0.1:2000/image/upload',
+            imageLinkUpload: 'http://127.0.0.1:2000/image/upload1'
+        });
+        
+    </script>
+</body>
+</html>

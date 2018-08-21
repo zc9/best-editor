@@ -1,0 +1,13 @@
+<div class="best-editor-toolbar">
+    <ul>
+        <% for(var key in tools) { 
+            if (!tools[key].value) {
+        %>
+        <li><a data-cmd="<%= tools[key].cmd %>" title="<%= tools[key].title %>"><%= tools[key].icon %></a></li>
+        <%        
+            } else {
+        %>
+        <li><a data-cmd="<%= tools[key].cmd %>" title="<%= tools[key].title %>" data-cmd-value="<%= tools[key].value %>"><%= tools[key].icon %></a></li>
+        <% } } %>
+    </ul>
+</div> 
