@@ -52,7 +52,7 @@ module.exports = (env, argv) => {
         },
         plugins: [
             new MiniCssExtractPlugin({
-                filename: 'best-editor.css'
+                filename: DEV ? 'best-editor.css' : 'best-editor.min.css'
             })
         ]
     };
