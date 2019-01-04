@@ -10,6 +10,8 @@
     "keywords": [
         "best-editor",
         "bestEditor",
+        "editor",
+        "编辑器",
         "web富文本编辑器"
     ],
     "main": "dist/best-editor.js",

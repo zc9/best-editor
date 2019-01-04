@@ -2,10 +2,13 @@
 
 一款简洁实用的web富文本编辑器，拥有着现代化UI风格的界面。比现有的富文本编辑器多了一些特色功能，图片上传，支持本地和链接，拥有着上传状态的预览框。文章粘贴做了内容上的优化，支持图片上传到自己的服务器并替换之。
 
-### 预览
-
 [![](https://raw.githubusercontent.com/zc9/best-editor/master/demo/ui1.jpg)](https://raw.githubusercontent.com/zc9/best-editor/master/demo/ui1.jpg)
 [![](https://raw.githubusercontent.com/zc9/best-editor/master/demo/ui2.jpg)](https://raw.githubusercontent.com/zc9/best-editor/master/demo/ui2.jpg)
+
+## 下载安装
+
+- 直接下载：[https://github.com/zc9/best-editor/releases](https://github.com/zc9/best-editor/releases)
+- 使用`npm`下载：`npm install --save best-editor` 
 
 ### 快速开始
 
