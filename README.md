@@ -5,10 +5,10 @@
 [![](https://raw.githubusercontent.com/zc9/best-editor/master/demo/ui1.jpg)](https://raw.githubusercontent.com/zc9/best-editor/master/demo/ui1.jpg)
 [![](https://raw.githubusercontent.com/zc9/best-editor/master/demo/ui2.jpg)](https://raw.githubusercontent.com/zc9/best-editor/master/demo/ui2.jpg)
 
-## 下载安装
+### 下载安装
 
 - 直接下载：[https://github.com/zc9/best-editor/releases](https://github.com/zc9/best-editor/releases)
-- 使用`npm`下载：`npm install --save best-editor` 
+- `npm`下载：`npm install --save best-editor` 
 
 ### 快速开始
 
