@@ -1,4 +1,4 @@
-import $ from '../$';
+import $ from '../dom';
 import imageDialogTpl from '../../ui/image-dialog.html';
 import imageUploadTpl from '../../ui/image-upload.html';
 import mito from 'mito';
@@ -33,9 +33,9 @@ class ImageHandle {
 
             if (_this.type === 1) {
                 $(this).text('或上传本地图片');
-                $inputBox.elems[0].style.display = 'flex';
+                $inputBox[0].style.display = 'flex';
                 $uploadBtn.hide();
-                $confirm.elems[0].style.display = 'inline-block';
+                $confirm[0].style.display = 'inline-block';
                 _this.type = 2;
             } else {
                 $inputBox.hide();
@@ -58,10 +58,10 @@ class ImageHandle {
                 _this._insertImage(2, [link], null);
             }
         });
-        var fileInput = this.$elem.find('input').elems[0];
+        var fileInput = this.$elem.find('input')[0];
 
         this.$elem.find('.upload-btn').bind('click', (event) => {
-            var fileInput = this.$elem.find('input').elems[0];
+            var fileInput = this.$elem.find('input')[0];
             fileInput.click();
             fileInput.onchange = (evt) => {
                 fileInput.val = '';
@@ -153,7 +153,7 @@ class ImageHandle {
             var $imageBox = $imageBoxArr[i];
             var image;
             if (!images && type === 2) {
-                image = $imageBox.find('.image-upload img').elems[0].src;
+                image = $imageBox.find('.image-upload img')[0].src;
             } else {
                 image = images[i];
             }
@@ -184,15 +184,15 @@ class ImageHandle {
                 if (type === 2 && !config.imageLinkUpload) {
                     $imageBox = $(`<div class="image-box"><img src="${image}"><br></div>`);
                     $imageBox.insertAfter(afterElem);
-                    afterElem = $imageBox.elems[0];
-                    this.context.bestEditor.selection.createRangeByElement($imageBox.elems[0], false, true);
+                    afterElem = $imageBox[0];
+                    this.context.bestEditor.selection.createRangeByElement($imageBox[0], false, true);
                     this.context.bestEditor.selection.restore();
                 } else {
                     var imageUpload = mito(imageUploadTpl)({imageUrl: image});
                     $imageBox = $(`<div class="image-box"></div>`);
                     $imageBox.append(imageUpload);
                     $imageBox.insertAfter(afterElem);
-                    afterElem = $imageBox.elems[0];
+                    afterElem = $imageBox[0];
                     $imageBoxArr.push($imageBox);
                 }
             }
@@ -202,12 +202,12 @@ class ImageHandle {
             if (text2.length > 0) {
                 var $p = $(`<p>${text2}</p>`)
                 $p.insertAfter($imageBox);
-                this.context.bestEditor.selection.createRangeByElement($p.elems[0], false);
+                this.context.bestEditor.selection.createRangeByElement($p[0], false);
                 this.context.bestEditor.selection.restore();
             } else {
                 var $p = $('<p><br></p>');
                 $p.insertAfter($imageBox);
-                this.context.bestEditor.selection.createRangeByElement($p.elems[0], false);
+                this.context.bestEditor.selection.createRangeByElement($p[0], false);
                 this.context.bestEditor.selection.restore();
             }
             if (type === 1 || config.imageLinkUpload) {
@@ -220,8 +220,8 @@ class ImageHandle {
             //     var $imageBox = $(`<div class="image-box"></div>`);
             //     $imageBox.append(imageUpload);
             //     var range = this.context.bestEditor.selection.getCurrentRange();
-            //     range.insertNode($imageBox.elems[0]);
-            //     //this.context.insertHTML($imageBox.elems[0].outerHTML);
+            //     range.insertNode($imageBox[0]);
+            //     //this.context.insertHTML($imageBox[0].outerHTML);
             //     $imageBoxArr.push($imageBox);
             //    // console.log($imageBox.parent().remove());
             // }

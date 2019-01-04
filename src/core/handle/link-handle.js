@@ -1,4 +1,4 @@
-import $ from '../$';
+import $ from '../dom';
 import linkDialogTpl from '../../ui/link-dialog.html';
 
 class LinkHandle {

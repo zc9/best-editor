@@ -1,4 +1,4 @@
-import $ from '../core/$';
+import $ from '../core/dom';
 import ListHandle from './handle/list-handle';
 import ImageHandle from './handle/image-handle';
 import LinkHandle from './handle/link-handle';
@@ -44,7 +44,7 @@ class Handler {
             $i.addClass('icon-full-screen-exit');
             $elem.attr('title', '退出全屏');
         }
-        this.bestEditor.$editor.elems[0].focus();
+        this.bestEditor.$editor[0].focus();
         this.bestEditor.selection.restore();
     }
 

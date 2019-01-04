@@ -7,7 +7,7 @@ module.exports = (env, argv) => {
         entry: './src/main.js',
         devtool: DEV ? 'inline-source-map' : '',
         output: {
-            filename: DEV ? 'best-editor.js' : 'best-editor.min.js',
+            filename: DEV ? 'best-editor-dev.js' : 'best-editor.js',
             path: path.resolve(__dirname, 'dist'),
             library: 'BestEditor',
             libraryTarget: 'umd',

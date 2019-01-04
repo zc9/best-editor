@@ -1,6 +1,6 @@
 import imageUploadTpl from '../../ui/image-upload.html';
 import mito from 'mito';
-import $ from '../$';
+import $ from '../dom';
 import ImageHandle from './image-handle';
 
 class PasteHandle {

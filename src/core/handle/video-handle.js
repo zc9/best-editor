@@ -1,4 +1,4 @@
-import $ from '../$';
+import $ from '../dom';
 import videoDialogTpl from '../../ui/video-dialog.html';
 
 class ImageHandle {

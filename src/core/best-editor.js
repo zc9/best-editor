@@ -1,4 +1,4 @@
-import $ from '../core/$';
+import $ from '../core/dom';
 import Toolbar from '../core/toolbar';
 import Handler from '../core/handler';
 import Selection from '../core/selection';
@@ -22,14 +22,14 @@ class BestEditor {
             this.config.imageLinkUpload = opts.imageLinkUpload;
         }
         //create editor
-        var $editor = $('div');
+        var $editor = $(document.createElement('div'));
         $editor.attr('contenteditable', true);
         $editor.addClass('best-editor');
         $container.append($editor);
         $editor.append('<p><br></p>');
         this.$editor = $editor;
 
-        $editor.elems[0].focus();
+        $editor.focus();
         this.selection.save();
         this.selection.restore();
         
@@ -118,7 +118,7 @@ class BestEditor {
                     var $p = $('<p><br></p>');
                     $p.insertBefore(selectionElem);
                     $p.html(text);
-                    _this.selection.createRangeByElement($p.elems[0]);
+                    _this.selection.createRangeByElement($p[0]);
                     _this.selection.restore();
                     $(selectionElem).remove();
                 }
@@ -129,7 +129,7 @@ class BestEditor {
                     var $p = $('<p><br/></p>')
                     _this.$editor.html('');
                     _this.$editor.append($p);
-                    _this.selection.createRangeByElement($p.elems[0], false, true);
+                    _this.selection.createRangeByElement($p[0], false, true);
                     _this.selection.restore()
                 }
             }

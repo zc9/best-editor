@@ -1,4 +1,4 @@
-import $ from '../$';
+import $ from '../dom';
 class ListHandle {
     constructor (context) {
         this.context = context;
@@ -28,7 +28,7 @@ class ListHandle {
         if (/^li$/i.test(selectionElem.tagName)) {
             $selectionElem = $selectionElem.parent();
         }
-        if (!/^ol|ul$/i.test($selectionElem.elems[0].tagName)) {
+        if (!/^ol|ul$/i.test($selectionElem[0].tagName)) {
             return;
         }
         var $parent = $selectionElem.parent()

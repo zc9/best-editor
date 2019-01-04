@@ -1,5 +1,5 @@
 import toolbarTpl from '../ui/toolbar.html';
-import $ from '../core/$';
+import $ from '../core/dom';
 import mito from 'mito';
 const DEFAULT_TOOLS =  {
     bold: {
