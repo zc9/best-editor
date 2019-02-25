@@ -20,19 +20,27 @@
             border: 1px solid  #ccc;
 
         }
-        div[contenteditable="true"]{ cursor:text }
+    
     </style>
 </head>
 <body>
+    <div> <button onclick="get()">get</button></div>
     <div id="editor">
         
     </div>
+   
     <script src="dist/best-editor.js"></script>
     <script>
         var bestEdtitor = new BestEditor('#editor', {
-            imageUpload: 'http://127.0.0.1:2000/image/upload',
-            imageLinkUpload: 'http://127.0.0.1:2000/image/upload1'
+            toolbar: ['bold', 'h1'],
+            // imageUpload: 'http://127.0.0.1:2000/image/upload',
+            // imageLinkUpload: 'http://127.0.0.1:2000/image/upload1'
         });
+
+        function get() {
+            var html = bestEdtitor.getHTML();
+         alert(html)
+        }
         
     </script>
 </body>
