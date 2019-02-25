@@ -2,6 +2,7 @@ class Selection {
     constructor () {
         this._curRange = null;
         this._context = window.getSelection();
+        console.log(this._context)
     }
 
     save (range) {

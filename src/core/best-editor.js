@@ -28,8 +28,6 @@ class BestEditor {
         $container.append($editor);
         $editor.append('<p><br></p>');
         this.$editor = $editor;
-        this.selection.save();
-        this.selection.restore();
         
         this.handler = new Handler(this);
         
